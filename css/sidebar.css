@@ -1,0 +1,67 @@
+body {
+	padding-top:50px;
+}
+
+.icon-bar {
+	background-color:#fff;
+}
+
+.navbar-bright {
+	background-color:#111155;
+    color:#fff;
+}
+  
+.navbar-bright a, #masthead a, #masthead .lead {
+  	color:#aaaacc;
+}
+
+.navbar-bright li > a:hover {
+    background-color:#000033;
+}
+
+.affix-top,.affix{
+	position: static;
+}
+
+@media (min-width: 979px) {
+  #sidebar.affix-top {
+    position: fixed;
+  	top:210px;
+  	width:150px;
+  }
+  
+  #sidebar.affix {
+    position: fixed;
+    top:210px;
+    width:150px;
+  }
+}
+
+#sidebar li
+{
+	font-weight: bold;
+	color: black;
+}
+
+#sidebar li.active {
+  	border:0 #eee solid;
+  	border-right-width:4px;
+}
+
+#mainCol h2 {
+	padding-top: 55px;
+    margin-top: -55px;
+}
+
+
+
+#sidebar.nav .nav {
+    font-size:12px;
+	font-weight:700;
+}
+
+#leftCol ul li
+{
+	background-color:#FFF;
+}
+
