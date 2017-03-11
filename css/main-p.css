@@ -81,6 +81,11 @@ hr
 	display: block;
 }
 
+.home-page__pic {
+	width: 430px;
+	height: 270px;
+}
+
 .divborder
 {
 
@@ -155,6 +160,16 @@ hr
 }
 }
 
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	.container--on-mobile{
+		padding: 0;
+	}
+	.row--on-mobile{
+		margin: 0;
+	}
+}
 
 /*collapse fix*/
 @media (max-width: 991px) {

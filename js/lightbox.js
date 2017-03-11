@@ -43,6 +43,7 @@
     alwaysShowNavOnTouchDevices: false,
     fadeDuration: 500,
     fitImagesInViewport: true,
+    // positionFromTop: 70,
     // maxWidth: 800,
     // maxHeight: 600,
     resizeDuration: 700,
@@ -193,7 +194,6 @@
       top: top + 'px',
       left: left + 'px'
     }).fadeIn(this.options.fadeDuration);
-
     this.changeImage(imageNumber);
   };
 
@@ -288,7 +288,13 @@
       self.$lightbox.find('.lb-dataContainer').width(newWidth);
       self.$lightbox.find('.lb-prevLink').height(newHeight);
       self.$lightbox.find('.lb-nextLink').height(newHeight);
+      var currentImage = self.$lightbox.find('.lb-image');
       self.showImage();
+      if(currentImage.width() <= currentImage.height()){
+        self.$lightbox.offset({top:70, left:0});
+      } else {
+        self.$lightbox.offset({top:200, left:0});
+      }
     }
 
     if (oldWidth !== newWidth || oldHeight !== newHeight) {

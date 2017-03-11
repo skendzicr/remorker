@@ -1,19 +1,19 @@
 /*Team style*/
 .view {
-   width: 170px;
-   height: 106px;
-   margin: 10px;
+   width: 300px;
+   height: 188px;
+   margin: 10px 5px;
    float: left;
-   border: 5px solid #fff;*/
+   border: 5px solid #fff;
    overflow: hidden;
    position: relative;
    text-align: center;
-   cursor: default;
+   cursor: pointer ;
 
 }
 .view .mask,.view .content {
-   width: 170px;
-   height: 106px;
+   width: 300px;
+   height: 188px;
    position: absolute;
    overflow: hidden;
    top: 0;
@@ -23,6 +23,8 @@
 .view img {
    display: block;
    position: relative;
+   width: 300px;
+   height: 188px;
 }
 .view h2 {
    text-transform: uppercase;
@@ -101,8 +103,8 @@
    -o-transition: all 0.3s ease-in-out 0.1s;
    -ms-transition: all 0.3s ease-in-out 0.1s;
    transition: all 0.3s ease-in-out 0.1s;*/
-   padding-top: -55px;
-   
+   padding-top: 55px !important;
+
 }
 .view-sixth p {
    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
@@ -201,7 +203,7 @@
 {
 	margin-top:0;
 	font-family: 'Lato', sans-serif;
-	font-weight: 700; 
+	font-weight: 700;
 	   padding-top:30px;
 }
 
@@ -217,7 +219,5 @@ p
 
 @media screen and (max-width: 768px) {
     body { padding-bottom: 60px; 	margin: 0 25px 0px -25px;}
-	
-}
 
-	
+}
