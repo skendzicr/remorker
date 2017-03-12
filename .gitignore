@@ -1,2 +1,4 @@
 /novo/
 node_modules/
+dist/
+.tmp/

@@ -11,9 +11,6 @@ const htmlmin = require('gulp-htmlmin')
 const uglify = require('gulp-uglify')
 const runSequence = require('run-sequence')
 const cleanCSS = require('gulp-clean-css')
-const responsive = require('gulp-responsive')
-const del = require('del')
-const fs = require('fs')
 
 
 
@@ -44,7 +41,7 @@ gulp.task('serve:dist', () => {
 
 
 gulp.task('minify-css', function() {
-    return gulp.src('.tmp/css/main.css')
+    return gulp.src('.tmp/css/**/*.css')
         .pipe(cleanCSS({
             compatibility: 'ie8'
         }))
@@ -79,7 +76,7 @@ gulp.task('sass', () => gulp.src('./app/sass/*.scss')
 
 // https://www.npmjs.com/package/gulp-imagemin
 
-gulp.task('images', () => gulp.src('app/img/*')
+gulp.task('images', () => gulp.src('app/img/**/*')
 
     .pipe(imagemin({
         // progressive: true,
@@ -90,7 +87,7 @@ gulp.task('images', () => gulp.src('app/img/*')
 
 
 
-gulp.task('minify', () => gulp.src('app/*.html')
+gulp.task('minify', () => gulp.src('app/**/*.html')
 
     .pipe(htmlmin({
         removeComments: true,
@@ -120,65 +117,12 @@ gulp.task('compress', () => gulp.src('.tmp/js/main.js')
 
 
 gulp.task('concat', () => gulp.src([
-
-        'app/js/base.js',
-        'app/js/second.js'
-
+        'app/**/*.js',
     ])
     .pipe(sourcemaps.init())
     .pipe(concat('main.js'))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('.tmp/js'))
-
-)
-
-// https://github.com/mahnunchik/gulp-responsive
-
-gulp.task('responsive', () => gulp.src('app/img/responsive/*.{jpg,png}')
-
-    .pipe(responsive({
-
-        '*': [{
-
-            width: 320,
-
-            rename: {
-
-                suffix: '-small',
-
-                extname: '.jpg'
-
-            }
-
-        }, {
-
-            width: 640,
-
-            rename: {
-
-                suffix: '-medium',
-
-                extname: '.jpg'
-
-            }
-
-        }, {
-
-            width: 1024,
-
-            rename: {
-
-                suffix: '-large',
-
-                extname: '.jpg'
-
-            }
-
-        }]
-
-    }))
-
-    .pipe(gulp.dest('.tmp/img/responsive'))
 
 )
 
@@ -188,7 +132,6 @@ gulp.task('copy', () => gulp.src([
         '.tmp/*'
     ])
     .pipe(gulp.dest('dist'))
-
 )
 
 
@@ -213,7 +156,7 @@ gulp.task('default', ['serve'])
 
 // production task
 
-gulp.task('build', ['minify-css', 'concat', 'compress', 'minify', 'copy', 'images'])
+gulp.task('build', ['sass','minify-css', 'concat', 'compress', 'minify', 'copy', 'images'])
 
 
 
