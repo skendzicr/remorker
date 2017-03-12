@@ -1,0 +1,40 @@
+{
+  "name": "remorker",
+  "version": "1.0.0",
+  "description": "Architects portfolio website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skendzicr/remorker.git"
+  },
+  "keywords": [
+    "architect",
+    "website",
+    "portfolio"
+  ],
+  "author": "Radovan Skendzic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skendzicr/remorker/issues"
+  },
+  "homepage": "https://github.com/skendzicr/remorker#readme",
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-clean-css": "^3.0.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-copy": "^1.0.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-uglify": "^2.1.0",
+    "run-sequence": "^1.2.2"
+  }
+}
